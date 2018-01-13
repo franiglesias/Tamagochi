@@ -13,6 +13,7 @@
 		DE8D3491200A0E9800375DCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE8D3490200A0E9800375DCF /* Assets.xcassets */; };
 		DE8D3494200A0E9800375DCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8D3492200A0E9800375DCF /* LaunchScreen.storyboard */; };
 		DE8D349F200A0E9800375DCF /* TamagochiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8D349E200A0E9800375DCF /* TamagochiTests.swift */; };
+		DE8D34AA200A146300375DCF /* TamagotchiBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8D34A9200A146300375DCF /* TamagotchiBuilderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		DE8D349A200A0E9800375DCF /* TamagochiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TamagochiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE8D349E200A0E9800375DCF /* TamagochiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamagochiTests.swift; sourceTree = "<group>"; };
 		DE8D34A0200A0E9800375DCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE8D34A9200A146300375DCF /* TamagotchiBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamagotchiBuilderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			children = (
 				DE8D349E200A0E9800375DCF /* TamagochiTests.swift */,
 				DE8D34A0200A0E9800375DCF /* Info.plist */,
+				DE8D34A9200A146300375DCF /* TamagotchiBuilderTests.swift */,
 			);
 			path = TamagochiTests;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE8D34AA200A146300375DCF /* TamagotchiBuilderTests.swift in Sources */,
 				DE8D349F200A0E9800375DCF /* TamagochiTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

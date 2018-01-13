@@ -1,36 +1,69 @@
-//
-//  TamagochiTests.swift
-//  TamagochiTests
-//
-//  Created by Fran Iglesias on 13/1/18.
-//  Copyright © 2018 Fran Iglesias. All rights reserved.
-//
-
 import XCTest
 @testable import Tamagochi
 
-class TamagochiTests: XCTestCase {
+class TamagotchiTest: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testFeedingTamagotchi() {
+        let tamagotchi = TamagotchiBuilder()
+            .with(fullness: 0)
+            .with(hungriness: 100)
+            .build()
+        
+        tamagotchi.feed()
+        
+        XCTAssertEqual(1, tamagotchi.fullness)
+        XCTAssertEqual(99, tamagotchi.hungriness)
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+    func testPlayingTamagotchi() {
+        let tamagotchi = TamagotchiBuilder()
+            .with(happiness: 0)
+            .with(tiredness: 100)
+            .build()
+        
+        tamagotchi.play()
+        
+        XCTAssertEqual(1, tamagotchi.happiness)
+        XCTAssertEqual(99, tamagotchi.tiredness)
+    }
+
+    func testTamagochiChangesWithTime() {
+        let tamagotchi = TamagotchiBuilder()
+            .with(happiness: 50)
+            .with(tiredness: 50)
+            .with(fullness: 50)
+            .with(hungriness: 50)
+            .build()
+        
+        tamagotchi.live()
+        
+        XCTAssertEqual(50, tamagotchi.happiness)
+        XCTAssertEqual(49, tamagotchi.tiredness)
+        XCTAssertEqual(49, tamagotchi.fullness)
+        XCTAssertEqual(51, tamagotchi.hungriness)
+    }
+}
+
+class Tamagotchi {
+    
+    var fullness = 0
+    var hungriness = 100
+    var happiness = 0
+    var tiredness = 100
+    
+    func feed() {
+        fullness += 1
+        hungriness -= 1
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func play() {
+        happiness += 1
+        tiredness -= 1
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func live() {
+        tiredness -= 1
+        fullness -= 1
+        hungriness -= 1
     }
-    
 }
