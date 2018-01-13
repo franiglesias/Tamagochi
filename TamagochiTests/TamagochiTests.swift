@@ -64,6 +64,6 @@ class Tamagotchi {
     func live() {
         tiredness -= 1
         fullness -= 1
-        hungriness -= 1
+        hungriness += 1
     }
 }
